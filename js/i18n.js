@@ -23,6 +23,8 @@ const STRINGS = {
     playAgain: 'Play Again',
     settingsAria: 'Settings',
     doneAria: 'Song complete',
+    tapToPlay: 'Tap to play',
+    twoFingers: 'Try two fingers!',
   },
   he: {
     settings: 'הגדרות',
@@ -41,6 +43,8 @@ const STRINGS = {
     playAgain: 'שחקו שוב',
     settingsAria: 'הגדרות',
     doneAria: 'השיר הושלם',
+    tapToPlay: 'הקישו כדי לשחק',
+    twoFingers: 'נסו שתי אצבעות!',
   },
 };
 

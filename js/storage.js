@@ -8,6 +8,7 @@ const KEYS = {
   haptics: 'hapticsEnabled',
   showNames: 'mt_showNames',
   song: 'mt_song',
+  seenTwoFingers: 'mt_seenTwoFingers',
 };
 
 function readBool(key, fallback) {
@@ -27,6 +28,10 @@ const SettingsStore = {
   // Off by default so the board stays clean; kids can turn it on.
   get showNames() { return readBool(KEYS.showNames, false); },
   set showNames(value) { localStorage.setItem(KEYS.showNames, value ? 'true' : 'false'); },
+
+  // Whether the player has already seen the one-time "two fingers" hint.
+  get seenTwoFingers() { return readBool(KEYS.seenTwoFingers, false); },
+  set seenTwoFingers(value) { localStorage.setItem(KEYS.seenTwoFingers, value ? 'true' : 'false'); },
 };
 
 const ProgressStore = {

@@ -7,7 +7,7 @@
 //  - Navigations are network-first; other same-origin assets are cache-first
 //    against the versioned cache. main.js reloads on controllerchange so users
 //    get the new build.
-const CACHE = 'music-tiles-v1';
+const CACHE = 'music-tiles-v2';
 
 const ASSETS = [
   './',
