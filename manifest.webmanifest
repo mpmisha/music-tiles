@@ -1,0 +1,17 @@
+{
+  "name": "Music Tiles",
+  "short_name": "Music Tiles",
+  "description": "A calm play-the-tune tile game for little kids. Tap the glowing tile to play the next note of a song. No ads, no accounts, no internet needed.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#20264f",
+  "theme_color": "#20264f",
+  "icons": [
+    { "src": "icons/icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#20264f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Music Tiles">
+  <title>Music Tiles</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Probe used to read safe-area insets as numbers for canvas layout. -->
+  <div id="safe-probe" aria-hidden="true"></div>
+
+  <canvas id="game"></canvas>
+
+  <header id="hud">
+    <div class="song-badge" id="song-badge">
+      <span class="note-icon">♪</span>
+      <span class="song-num" id="hud-song">1/8</span>
+    </div>
+    <div class="song-title" id="hud-title">Twinkle Twinkle</div>
+    <button class="gear" id="gear" aria-label="Settings">⚙︎</button>
+  </header>
+
+  <!-- Settings overlay -->
+  <div class="overlay" id="settings-overlay" hidden>
+    <div class="scrim" data-dismiss="settings"></div>
+    <div class="panel" role="dialog" aria-label="Settings" id="settings-panel">
+      <h2 id="settings-title">Settings</h2>
+      <p class="panel-sub" id="settings-song">Song 1 of 8</p>
+
+      <div class="row">
+        <span class="row-label" id="label-names">Show note letters</span>
+        <button class="toggle" id="toggle-names" role="switch"><span class="knob"></span></button>
+      </div>
+
+      <div class="row">
+        <span class="row-label" id="label-sound">Sound</span>
+        <button class="toggle" id="toggle-sound" role="switch"><span class="knob"></span></button>
+      </div>
+
+      <div class="row">
+        <span class="row-label" id="label-haptics">Vibration</span>
+        <button class="toggle" id="toggle-haptics" role="switch"><span class="knob"></span></button>
+      </div>
+
+      <button class="btn primary" id="btn-new-game">Restart from Song 1</button>
+      <a class="btn secondary back-hub" id="btn-back-hub" hidden>Back to Games</a>
+      <button class="btn secondary" id="btn-close">Close</button>
+    </div>
+  </div>
+
+  <!-- Song complete overlay -->
+  <div class="overlay" id="complete-overlay" hidden>
+    <div class="scrim"></div>
+    <div class="panel win" role="dialog" aria-label="Song complete" id="complete-panel">
+      <div class="win-emoji">🎵</div>
+      <h2 id="complete-title">Nice playing!</h2>
+      <p class="win-caption" id="complete-caption">You played Twinkle Twinkle</p>
+      <button class="btn primary" id="btn-next">Next Song</button>
+    </div>
+  </div>
+
+  <!-- Victory overlay -->
+  <div class="overlay" id="victory-overlay" hidden>
+    <div class="scrim"></div>
+    <div class="panel win" role="dialog" aria-label="All songs complete" id="victory-panel">
+      <div class="win-emoji">🏆</div>
+      <h2 id="victory-title">You played them all!</h2>
+      <p class="win-caption" id="victory-caption">You learned every song!</p>
+      <button class="btn primary" id="btn-play-again">Play Again</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
